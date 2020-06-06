@@ -1,18 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import scatShape from '../../../helpers/propz/scatShape';
 import './ScatCard.scss';
 
 class ScatCard extends React.Component {
   static propTypes = {
-    scat: PropTypes.object.isRequired,
+    scat: scatShape.scatShape,
   }
 
   render() {
     const { scat } = this.props;
     return (
-      <div className="ScatCard">
-        {scat.id}
+      <div className="ScatCard col-3 d-flex">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">{scat.location}</h5>
+            <p className="card-text">{scat.notes}</p>
+          </div>
+        </div>
       </div>
     );
   }
