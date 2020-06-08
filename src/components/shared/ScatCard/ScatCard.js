@@ -15,11 +15,11 @@ class ScatCard extends React.Component {
     const editLink = `/edit/${scat.id}`;
     return (
       <div className="ScatCard col-3 d-flex">
-        <div className="card">
+        <div className="card container-fluid">
           <div className="card-body">
             <h5 className="card-title">{scat.location}</h5>
             <Link className="btn btn-outline-primary" to={singleLink}><i className="fas fa-binoculars"></i></Link>
-            <Link className="btn btn-outline-warning" to={editLink}><i class="fas fa-pen"></i></Link>
+            <Link className="btn btn-outline-warning" to={editLink}><i className="fas fa-pen"></i></Link>
             <p className="card-text">{scat.notes}</p>
           </div>
         </div>
